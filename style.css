@@ -184,6 +184,20 @@ p {
   display: block;
 }
 
+.hero-hr {
+  border: 0;
+  height: 2px;
+  background-color: var(--accent-gold);
+  margin: 1rem 0;
+  width:32em;
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
 /* ==========================================================================
    2. CONTINUOUS HORIZONTAL MARQUEE
    ========================================================================== */
