@@ -24,7 +24,7 @@
           <span class="eyebrow eyebrow-dark">Entrepreneur · Founder · Impress</span>
           <h1>RM Mathew</h1>
           <hr class="hero-hr">
-          <p class="hero-subtitle">Impress Managing Director, Impress Decor and Rental PVT Ltd</p>
+          <p class="hero-subtitle">Managing Director, Impress Decors and Rental Pvt Ltd.</p>
 
           <div class="quote-text quote-dark">
             "First become worthy. Then aspire for greatness."
@@ -38,6 +38,13 @@
             <p>
               From humble beginnings to building one of Tamil Nadu's trusted event infrastructure ecosystems, the
               journey is driven by purpose, perseverance, and a relentless pursuit of excellence.
+
+              These words are more than a philosophy—they are the foundation of Mathew's entrepreneurial journey.
+              Every venture built, every challenge overcome, and every milestone achieved reflects this belief.
+            </p>
+            <p>
+              From humble beginnings to building one of Tamil Nadu's trusted event infrastructure ecosystems,
+              the journey is driven by purpose, perseverance, and a relentless pursuit of excellence.
             </p>
           </div>
         </div>
@@ -156,24 +163,36 @@
         <!-- Right Interactive Card Slider -->
         <div class="impact-card-wrapper">
           <div class="impact-card-box">
-            <div class="impact-card-content" id="impact-card-display">
-              <h3 id="card-title">Education</h3>
-              <p id="card-desc">Supporting schools, students, and educational initiatives to encourage learning and
-                long-term development.
-              </p>
+            <div class="impact-card-img-container">
+              <img src="images/impact-education.jpg" alt="Education" id="card-image" class="impact-card-img">
             </div>
+            <div class="impact-card-body">
+              <div class="impact-card-content" id="impact-card-display">
+                <h3 id="card-title">Education</h3>
+                <p id="card-desc">Supporting schools, students, and educational initiatives to encourage learning and
+                  long-term development.
+                </p>
+              </div>
 
-            <div class="card-nav-controls">
-              <button class="nav-arrow-btn" onclick="navigateCard(-1)" aria-label="Previous card">
-                <svg viewBox="0 0 24 24">
-                  <path d="M15 18l-6-6 6-6" />
-                </svg>
-              </button>
-              <button class="nav-arrow-btn" onclick="navigateCard(1)" aria-label="Next card">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 18l6-6-6-6" />
-                </svg>
-              </button>
+              <div class="card-nav-controls">
+                <div class="card-dots" id="card-dots">
+                  <span class="card-dot active" onclick="goToCard(0)" aria-label="Slide 1"></span>
+                  <span class="card-dot" onclick="goToCard(1)" aria-label="Slide 2"></span>
+                  <span class="card-dot" onclick="goToCard(2)" aria-label="Slide 3"></span>
+                </div>
+                <div class="card-nav-btns">
+                  <button class="nav-arrow-btn" onclick="navigateCard(-1)" aria-label="Previous card">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                  </button>
+                  <button class="nav-arrow-btn" onclick="navigateCard(1)" aria-label="Next card">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M9 18l6-6-6-6" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -197,66 +216,65 @@
         </p>
       </div>
 
-      <div class="highlights-list">
+      <div class="highlights-grid">
 
-        <!-- Highlight 01 -->
-        <div class="highlight-section">
-          <div class="highlight-item">
-            <div class="highlight-number">01</div>
-            <div class="highlight-content">
-              <h3>64 Concurrent Events. One Extraordinary Achievement.</h3>
-              <p>
-                Successfully executing 64 events simultaneously in a single day stands as one of the most remarkable
-                milestones in the company's history. It reflects exceptional planning, coordination, logistics, manpower
-                management, and unwavering dedication to delivering excellence at scale.
-              </p>
-            </div>
+        <!-- Card 01 -->
+        <div class="highlight-card">
+          <div class="highlight-card-header">
+            <span class="highlight-number">01</span>
+          </div>
+          <div class="highlight-content">
+            <h3>64 Events. One Extraordinary Day.</h3>
+            <p>
+              Successfully executing 64 events simultaneously in a single day stands as a remarkable milestone. It
+              reflects exceptional planning, coordination, logistics, manpower management, and a strong commitment to
+              delivering excellence at scale.
+            </p>
           </div>
         </div>
 
-        <!-- Highlight 02 -->
-        <div class="highlight-section">
-          <div class="highlight-item">
-            <div class="highlight-number">02</div>
-            <div class="highlight-content">
-              <h3>Engineering Complex Event Solutions</h3>
-              <p>
-                From large-scale infrastructure installations to technically challenging event structures, Mathew has
-                consistently transformed complex requirements into successful executions through innovation, expertise,
-                and teamwork — including high-rise building spans, rapid German Shed installations, and stadium setups
-                completed under demanding timelines.
-              </p>
-            </div>
+        <!-- Card 02 -->
+        <div class="highlight-card">
+          <div class="highlight-card-header">
+            <span class="highlight-number">02</span>
+          </div>
+          <div class="highlight-content">
+            <h3>Engineering Complex Event Solutions</h3>
+            <p>
+              From large-scale infrastructure to technically challenging event structures, Mathew has consistently
+              transformed complex requirements into successful executions through innovation, expertise, teamwork, and
+              precise planning under demanding timelines.
+            </p>
           </div>
         </div>
 
-        <!-- Highlight 03 -->
-        <div class="highlight-section">
-          <div class="highlight-item">
-            <div class="highlight-number">03</div>
-            <div class="highlight-content">
-              <h3>Delivering Under Pressure</h3>
-              <p>
-                Whether working against tight deadlines, unpredictable weather conditions, or large-scale event
-                requirements, Mathew's leadership has enabled his teams to consistently deliver projects with precision,
-                reliability, and confidence.
-              </p>
-            </div>
+        <!-- Card 03 -->
+        <div class="highlight-card">
+          <div class="highlight-card-header">
+            <span class="highlight-number">03</span>
+          </div>
+          <div class="highlight-content">
+            <h3>Delivering Under <br>Pressure</h3>
+            <p>
+              Whether working against tight deadlines, unpredictable weather conditions, or large-scale event
+              requirements, Mathew’s leadership enables his teams to deliver every project with precision, reliability,
+              and confidence while maintaining high standards throughout.
+            </p>
           </div>
         </div>
 
-        <!-- Highlight 04 -->
-        <div class="highlight-section">
-          <div class="highlight-item">
-            <div class="highlight-number">04</div>
-            <div class="highlight-content">
-              <h3>Trusted Across Industries</h3>
-              <p>
-                Corporate organizations, government institutions, event planners, wedding professionals, and leading
-                brands continue to place their trust in Mathew and his ventures for delivering world-class event
-                experiences.
-              </p>
-            </div>
+        <!-- Card 04 -->
+        <div class="highlight-card">
+          <div class="highlight-card-header">
+            <span class="highlight-number">04</span>
+          </div>
+          <div class="highlight-content">
+            <h3>Trusted Across <br>Industries</h3>
+            <p>
+              Corporate organizations, government institutions, event planners, wedding professionals, and leading
+              brands continue to place their trust in Mathew and his ventures for delivering professionally managed,
+              reliable, and world-class event experiences.
+            </p>
           </div>
         </div>
 
@@ -272,8 +290,8 @@
     <div class="container">
 
       <div class="footer-brand">
-        <h2>Mathew</h2>
-        <p>Impress · Event infrastructure ecosystem, Tamil Nadu</p>
+        <h2>RM Mathew</h2>
+        <p>Managing Director, Impress Decors and Rental Pvt Ltd.</p>
       </div>
 
       <div class="social-links">
@@ -298,9 +316,11 @@
       </div>
 
       <div class="footer-copyright">
-        <p>© 2026 <a href="https://www.jodbs.com/" class="JOD-link">JOD Business Services</a>. All rights reserved.
+        <p>© 2026 All rights reserved. Developed by <a href="https://www.jodbs.com/" class="JOD-link">JOD Business
+            Services</a>.
         </p>
       </div>
+
 
     </div>
   </footer>
