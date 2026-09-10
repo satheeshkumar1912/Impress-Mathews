@@ -26,19 +26,19 @@ const impactCards = [
   {
     title: "Education",
     desc: "Supporting schools, students, and educational initiatives to encourage learning and long-term development.",
-    image: "images/impact-education.jpg",
+    image: "images/indian_education_community.webp",
     alt: "Supporting educational initiatives and students"
   },
   {
     title: "Community Growth",
     desc: "Contributing to religious institutions, community programs, and social welfare initiatives.",
-    image: "images/impact-community.jpg",
+    image: "images/community_growth_indian_welfare.webp",
     alt: "Community outreach and social welfare programs"
   },
   {
     title: "Sustainability",
     desc: "Creating sustainable career opportunities while nurturing talent and professional growth.",
-    image: "images/impact-sustainability.jpg",
+    image: "images/sustainability_indian_visual.webp",
     alt: "Sustainable development and professional craftsmanship"
   }
 ];
@@ -49,8 +49,7 @@ function navigateCard(direction) {
   currentCardIndex += direction;
   if (currentCardIndex < 0) {
     currentCardIndex = impactCards.length - 1;
-  } else if (currentCardIndex >= impactCards.length) {
-    currentCardIndex = 0;
+  } else if (currentCardIndex >= impactCards.length) {+
   }
   updateImpactCard();
 }
