@@ -49,7 +49,8 @@ function navigateCard(direction) {
   currentCardIndex += direction;
   if (currentCardIndex < 0) {
     currentCardIndex = impactCards.length - 1;
-  } else if (currentCardIndex >= impactCards.length) {+
+  } else if (currentCardIndex >= impactCards.length) {
+    currentCardIndex = 0;
   }
   updateImpactCard();
 }
