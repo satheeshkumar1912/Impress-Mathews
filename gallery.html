@@ -78,57 +78,13 @@
   </section>
 
   <!-- ==========================================================================
-       GALLERY PHOTO SECTION & CONTROLS
+       GALLERY PHOTO SECTION
        ========================================================================== -->
   <main class="gallery-section">
     <div class="container">
 
-      <!-- Interactive Layout & Filter Toolbar -->
-      <div class="gallery-toolbar-card">
-        <div class="toolbar-info">
-          <span class="toolbar-count-badge">40 Photos</span>
-          <p class="toolbar-hint">Click any photo for cinematic full-screen view</p>
-        </div>
-
-        <div class="layout-switchers">
-          <span class="layout-label">View Style:</span>
-          <div class="switcher-group">
-            <button class="switcher-btn active" id="btn-layout-bento" onclick="switchGalleryLayout('bento')"
-              aria-label="Editorial Bento Layout">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="7" height="11" rx="1" />
-                <rect x="14" y="3" width="7" height="6" rx="1" />
-                <rect x="14" y="13" width="7" height="8" rx="1" />
-                <rect x="3" y="17" width="7" height="4" rx="1" />
-              </svg>
-              <span>Editorial Bento</span>
-            </button>
-            <button class="switcher-btn" id="btn-layout-masonry" onclick="switchGalleryLayout('masonry')"
-              aria-label="Masonry Layout">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="7" height="7" rx="1" />
-                <rect x="14" y="3" width="7" height="10" rx="1" />
-                <rect x="3" y="13" width="7" height="8" rx="1" />
-                <rect x="14" y="16" width="7" height="5" rx="1" />
-              </svg>
-              <span>Masonry</span>
-            </button>
-            <button class="switcher-btn" id="btn-layout-grid" onclick="switchGalleryLayout('grid')"
-              aria-label="Uniform Grid Layout">
-              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
-                <rect x="3" y="3" width="7" height="7" rx="1" />
-                <rect x="14" y="3" width="7" height="7" rx="1" />
-                <rect x="3" y="14" width="7" height="7" rx="1" />
-                <rect x="14" y="14" width="7" height="7" rx="1" />
-              </svg>
-              <span>Classic Grid</span>
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Main Dynamic Gallery Grid Container -->
-      <div class="gallery-container layout-bento" id="gallery-container">
+      <!-- Masonry Gallery Grid -->
+      <div class="gallery-container layout-masonry" id="gallery-container">
 
         <!-- 40 Curated Images from images/gallery/ -->
         <div class="gallery-card bento-featured" onclick="openLightbox(0)" data-index="0" role="button" tabindex="0"

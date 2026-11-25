@@ -241,28 +241,7 @@ function initGallery() {
 }
 
 /* --------------------------------------------------------------------------
-   5. Dynamic Layout Switcher (Bento / Masonry / Grid)
-   -------------------------------------------------------------------------- */
-function switchGalleryLayout(layoutType) {
-  const container = document.getElementById('gallery-container');
-  if (!container) return;
-
-  // Remove existing layout classes
-  container.classList.remove('layout-bento', 'layout-masonry', 'layout-grid');
-  container.classList.add(`layout-${layoutType}`);
-
-  // Update button active states
-  const buttons = document.querySelectorAll('.switcher-btn');
-  buttons.forEach(btn => btn.classList.remove('active'));
-
-  const activeBtn = document.getElementById(`btn-layout-${layoutType}`);
-  if (activeBtn) {
-    activeBtn.classList.add('active');
-  }
-}
-
-/* --------------------------------------------------------------------------
-   6. Lightbox Controls, Thumbnails & Zoom
+   5. Lightbox Controls, Thumbnails & Zoom
    -------------------------------------------------------------------------- */
 function renderLightboxThumbnails() {
   const thumbsContainer = document.getElementById('lightbox-thumbnails');
