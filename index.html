@@ -13,6 +13,39 @@
 <body>
 
   <!-- ==========================================================================
+       HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" aria-label="RM Mathew Home">
+        <span class="logo-name">RM Mathew</span>
+        <span class="logo-sub">Impress</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#story" class="nav-link">The Journey</a>
+        <a href="#impact" class="nav-link">Social Impact</a>
+        <a href="#highlights" class="nav-link">Signature Projects</a>
+        <a href="gallery.html" class="nav-link nav-btn-gallery">
+          <span>Gallery</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+        </a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
        1. HERO SECTION [Entrepreneur · Founder · Impress] (Dark Forest Green)
        ========================================================================== -->
   <section class="hero-section" id="hero">
@@ -38,14 +71,25 @@
             <p>
               From humble beginnings to building one of Tamil Nadu's trusted event infrastructure ecosystems, the
               journey is driven by purpose, perseverance, and a relentless pursuit of excellence.
+            </p>
+          </div>
 
-              These words are more than a philosophy—they are the foundation of Mathew's entrepreneurial journey.
-              Every venture built, every challenge overcome, and every milestone achieved reflects this belief.
-            </p>
-            <p>
-              From humble beginnings to building one of Tamil Nadu's trusted event infrastructure ecosystems,
-              the journey is driven by purpose, perseverance, and a relentless pursuit of excellence.
-            </p>
+          <!-- Hero Action Buttons -->
+          <div class="hero-actions">
+            <a href="gallery.html" class="hero-btn-primary">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <circle cx="8.5" cy="8.5" r="1.5" />
+                <polyline points="21 15 16 10 5 21" />
+              </svg>
+              <span>Explore Gallery</span>
+            </a>
+            <a href="#story" class="hero-btn-secondary">
+              <span>Read Story</span>
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 13l5 5 5-5M12 4v14" />
+              </svg>
+            </a>
           </div>
         </div>
 
@@ -66,19 +110,29 @@
   <section class="marquee-section" id="marquee">
     <div class="marquee-track" id="marquee-track">
 
-      <div class="marquee-item">
-        <img src="images/impress decor logo.png" alt="Impress Decors" class="marquee-logo-img-impress">
-      </div>
-      <div class="marquee-item">
-        <img src="images/impress event rental logo.png" alt="Impress event rentals" class="marquee-logo-img-impress">
-      </div>
-      <div class="marquee-item">
-        <img src="images/Impress signature seating logo.png" alt="Impress Signature" class="marquee-logo-img-impress">
-      </div>
-      <div class="marquee-item">
-        <img src="images/Amoga Decors logo.webp" alt="Amoga decors" class="marquee-logo-img-amoga">
-      </div>
+      <a href="https://impressdecors.com/">
+        <div class="marquee-item">
+          <img src="images/impress decor logo.png" alt="Impress Decors" class="marquee-logo-img-impress">
+        </div>
+      </a>
 
+      <a href="#">
+        <div class="marquee-item">
+          <img src="images/impress event rental logo.png" alt="Impress event rentals" class="marquee-logo-img-impress">
+        </div>
+      </a>
+
+      <a href="https://impressseating.com/">
+        <div class="marquee-item">
+          <img src="images/Impress signature seating logo.png" alt="Impress Signature" class="marquee-logo-img-impress">
+        </div>
+      </a>
+
+      <a>
+        <div class="marquee-item">
+          <img src="images/Amoga Decors logo.webp" alt="Amoga decors" class="marquee-logo-img-amoga">
+        </div>
+      </a>
     </div>
   </section>
 
@@ -292,6 +346,14 @@
       <div class="footer-brand">
         <h2>RM Mathew</h2>
         <p>Managing Director, Impress Decors and Rental Pvt Ltd.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="#hero">Home</a>
+        <a href="#story">The Journey</a>
+        <a href="#impact">Social Impact</a>
+        <a href="#highlights">Signature Projects</a>
+        <a href="gallery.html">Photo Gallery</a>
       </div>
 
       <div class="social-links">

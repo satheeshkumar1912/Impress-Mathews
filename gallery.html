@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery | RM Mathew · Impress</title>
+  <meta name="description"
+    content="Explore the exclusive photo gallery of RM Mathew, Founder & Managing Director of Impress Decors and Rental Pvt Ltd.">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="gallery-page">
+
+  <!-- ==========================================================================
+       LIVE MOTION BACKGROUND WITH AMBIENT GLOW
+       ========================================================================== -->
+  <div class="gallery-motion-wrapper" aria-hidden="true">
+    <canvas id="gallery-motion-bg" class="gallery-motion-canvas"></canvas>
+    <div class="motion-glow-orb motion-orb-1"></div>
+    <div class="motion-glow-orb motion-orb-2"></div>
+    <div class="motion-glow-orb motion-orb-3"></div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="header-logo" aria-label="RM Mathew Home">
+        <span class="logo-name">RM Mathew</span>
+        <span class="logo-sub">Impress</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <a href="index.html#hero" class="nav-link">Home</a>
+        <a href="index.html#story" class="nav-link">The Journey</a>
+        <a href="index.html#impact" class="nav-link">Social Impact</a>
+        <a href="index.html#highlights" class="nav-link">Signature Projects</a>
+        <a href="gallery.html" class="nav-link nav-btn-gallery active">
+          <span>Gallery</span>
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+            <polyline points="21 15 16 10 5 21" />
+          </svg>
+        </a>
+      </nav>
+
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation menu" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       GALLERY HERO SECTION WITH AMBIENT GLOW
+       ========================================================================== -->
+  <section class="gallery-hero-section">
+    <!-- Ambient Background Glow Orbs -->
+    <div class="hero-glow-orb orb-1"></div>
+    <div class="hero-glow-orb orb-2"></div>
+
+    <div class="container">
+      <div class="gallery-hero-content">
+        <a href="index.html" class="gallery-back-link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+          <span>Return to Home</span>
+        </a>
+
+        <div class="hero-tag-wrap">
+          <span class="eyebrow eyebrow-glow">✦ EXCLUSIVE ARCHIVE · RM MATHEW</span>
+        </div>
+
+        <h1 class="gallery-hero-title">
+          Moments, Vision & <span class="gold-shimmer-text">Milestones</span>
+        </h1>
+
+        <p class="gallery-hero-desc">
+          A visual chronicle capturing the journey, discipline, and milestones of RM Mathew — shaping the premier event
+          infrastructure ecosystem across Tamil Nadu.
+        </p>
+
+        <!-- Stats & Highlights Bar -->
+        <div class="gallery-meta-bar">
+          <div class="gallery-stat-pill">
+            <span class="live-pulse-dot"></span>
+            <strong>40</strong> Curated Photographs
+          </div>
+          <div class="gallery-stat-pill">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon
+                points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+            </svg>
+            High Definition
+          </div>
+          <div class="gallery-stat-pill">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+              <circle cx="8.5" cy="8.5" r="1.5" />
+              <polyline points="21 15 16 10 5 21" />
+            </svg>
+            Interactive Lightbox
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       GALLERY PHOTO SECTION & CONTROLS
+       ========================================================================== -->
+  <main class="gallery-section">
+    <div class="container">
+
+      <!-- Interactive Layout & Filter Toolbar -->
+      <div class="gallery-toolbar-card">
+        <div class="toolbar-info">
+          <span class="toolbar-count-badge">40 Photos</span>
+          <p class="toolbar-hint">Click any photo for cinematic full-screen view</p>
+        </div>
+
+        <div class="layout-switchers">
+          <span class="layout-label">View Style:</span>
+          <div class="switcher-group">
+            <button class="switcher-btn active" id="btn-layout-bento" onclick="switchGalleryLayout('bento')"
+              aria-label="Editorial Bento Layout">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="11" rx="1" />
+                <rect x="14" y="3" width="7" height="6" rx="1" />
+                <rect x="14" y="13" width="7" height="8" rx="1" />
+                <rect x="3" y="17" width="7" height="4" rx="1" />
+              </svg>
+              <span>Editorial Bento</span>
+            </button>
+            <button class="switcher-btn" id="btn-layout-masonry" onclick="switchGalleryLayout('masonry')"
+              aria-label="Masonry Layout">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="10" rx="1" />
+                <rect x="3" y="13" width="7" height="8" rx="1" />
+                <rect x="14" y="16" width="7" height="5" rx="1" />
+              </svg>
+              <span>Masonry</span>
+            </button>
+            <button class="switcher-btn" id="btn-layout-grid" onclick="switchGalleryLayout('grid')"
+              aria-label="Uniform Grid Layout">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="3" y="3" width="7" height="7" rx="1" />
+                <rect x="14" y="3" width="7" height="7" rx="1" />
+                <rect x="3" y="14" width="7" height="7" rx="1" />
+                <rect x="14" y="14" width="7" height="7" rx="1" />
+              </svg>
+              <span>Classic Grid</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Main Dynamic Gallery Grid Container -->
+      <div class="gallery-container layout-bento" id="gallery-container">
+
+        <!-- 40 Curated Images from images/gallery/ -->
+        <div class="gallery-card bento-featured" onclick="openLightbox(0)" data-index="0" role="button" tabindex="0"
+          aria-label="View photo 1 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04678.webp" alt="RM Mathew Portrait" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(1)" data-index="1" role="button" tabindex="0"
+          aria-label="View photo 2 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04700.webp" alt="RM Mathew Gallery Image 2" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(2)" data-index="2" role="button" tabindex="0"
+          aria-label="View photo 3 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04705.webp" alt="RM Mathew Gallery Image 3" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(3)" data-index="3" role="button" tabindex="0"
+          aria-label="View photo 4 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04733.webp" alt="RM Mathew Gallery Image 4" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(4)" data-index="4" role="button" tabindex="0"
+          aria-label="View photo 5 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04739.webp" alt="RM Mathew Gallery Image 5" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(5)" data-index="5" role="button" tabindex="0"
+          aria-label="View photo 6 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04753.webp" alt="RM Mathew Gallery Image 6" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(6)" data-index="6" role="button" tabindex="0"
+          aria-label="View photo 7 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04755.webp" alt="RM Mathew Gallery Image 7" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card bento-wide" onclick="openLightbox(7)" data-index="7" role="button" tabindex="0"
+          aria-label="View photo 8 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04773.webp" alt="RM Mathew Gallery Image 8" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(8)" data-index="8" role="button" tabindex="0"
+          aria-label="View photo 9 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04804.webp" alt="RM Mathew Gallery Image 9" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(9)" data-index="9" role="button" tabindex="0"
+          aria-label="View photo 10 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04842.webp" alt="RM Mathew Gallery Image 10" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card bento-tall" onclick="openLightbox(10)" data-index="10" role="button" tabindex="0"
+          aria-label="View photo 11 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04873.webp" alt="RM Mathew Gallery Image 11" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(11)" data-index="11" role="button" tabindex="0"
+          aria-label="View photo 12 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04893.webp" alt="RM Mathew Gallery Image 12" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(12)" data-index="12" role="button" tabindex="0"
+          aria-label="View photo 13 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04902.webp" alt="RM Mathew Gallery Image 13" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(13)" data-index="13" role="button" tabindex="0"
+          aria-label="View photo 14 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04913.webp" alt="RM Mathew Gallery Image 14" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(14)" data-index="14" role="button" tabindex="0"
+          aria-label="View photo 15 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04927.webp" alt="RM Mathew Gallery Image 15" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card bento-wide" onclick="openLightbox(15)" data-index="15" role="button" tabindex="0"
+          aria-label="View photo 16 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04945.webp" alt="RM Mathew Gallery Image 16" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(16)" data-index="16" role="button" tabindex="0"
+          aria-label="View photo 17 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04980.webp" alt="RM Mathew Gallery Image 17" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(17)" data-index="17" role="button" tabindex="0"
+          aria-label="View photo 18 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC04995.webp" alt="RM Mathew Gallery Image 18" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(18)" data-index="18" role="button" tabindex="0"
+          aria-label="View photo 19 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05061.webp" alt="RM Mathew Gallery Image 19" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(19)" data-index="19" role="button" tabindex="0"
+          aria-label="View photo 20 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05065.webp" alt="RM Mathew Gallery Image 20" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(20)" data-index="20" role="button" tabindex="0"
+          aria-label="View photo 21 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05066.webp" alt="RM Mathew Gallery Image 21" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(21)" data-index="21" role="button" tabindex="0"
+          aria-label="View photo 22 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05070.webp" alt="RM Mathew Gallery Image 22" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card bento-featured" onclick="openLightbox(22)" data-index="22" role="button" tabindex="0"
+          aria-label="View photo 23 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05080.webp" alt="RM Mathew Gallery Image 23" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(23)" data-index="23" role="button" tabindex="0"
+          aria-label="View photo 24 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05097.webp" alt="RM Mathew Gallery Image 24" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(24)" data-index="24" role="button" tabindex="0"
+          aria-label="View photo 25 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05100.webp" alt="RM Mathew Gallery Image 25" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(25)" data-index="25" role="button" tabindex="0"
+          aria-label="View photo 26 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05113.webp" alt="RM Mathew Gallery Image 26" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(26)" data-index="26" role="button" tabindex="0"
+          aria-label="View photo 27 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05127.webp" alt="RM Mathew Gallery Image 27" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(27)" data-index="27" role="button" tabindex="0"
+          aria-label="View photo 28 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05145.webp" alt="RM Mathew Gallery Image 28" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(28)" data-index="28" role="button" tabindex="0"
+          aria-label="View photo 29 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05165.webp" alt="RM Mathew Gallery Image 29" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card bento-tall" onclick="openLightbox(29)" data-index="29" role="button" tabindex="0"
+          aria-label="View photo 30 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05177.webp" alt="RM Mathew Gallery Image 30" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(30)" data-index="30" role="button" tabindex="0"
+          aria-label="View photo 31 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05192.webp" alt="RM Mathew Gallery Image 31" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(31)" data-index="31" role="button" tabindex="0"
+          aria-label="View photo 32 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05196.webp" alt="RM Mathew Gallery Image 32" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(32)" data-index="32" role="button" tabindex="0"
+          aria-label="View photo 33 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05206.webp" alt="RM Mathew Gallery Image 33" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(33)" data-index="33" role="button" tabindex="0"
+          aria-label="View photo 34 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05225.webp" alt="RM Mathew Gallery Image 34" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(34)" data-index="34" role="button" tabindex="0"
+          aria-label="View photo 35 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05248.webp" alt="RM Mathew Gallery Image 35" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(35)" data-index="35" role="button" tabindex="0"
+          aria-label="View photo 36 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05253.webp" alt="RM Mathew Gallery Image 36" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(36)" data-index="36" role="button" tabindex="0"
+          aria-label="View photo 37 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05260.webp" alt="RM Mathew Gallery Image 37" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(37)" data-index="37" role="button" tabindex="0"
+          aria-label="View photo 38 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05281.webp" alt="RM Mathew Gallery Image 38" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card bento-wide" onclick="openLightbox(38)" data-index="38" role="button" tabindex="0"
+          aria-label="View photo 39 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05303.webp" alt="RM Mathew Gallery Image 39" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+        <div class="gallery-card" onclick="openLightbox(39)" data-index="39" role="button" tabindex="0"
+          aria-label="View photo 40 in full view">
+          <div class="card-glow-layer"></div>
+          <img src="images/gallery/UKC05315.webp" alt="RM Mathew Gallery Image 40" class="gallery-img" loading="lazy"
+            decoding="async">
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       CINEMATIC FULLSCREEN LIGHTBOX MODAL WITH THUMBNAIL STRIP
+       ========================================================================== -->
+  <div class="lightbox-modal" id="lightbox-modal" role="dialog" aria-modal="true"
+    aria-label="High Definition Gallery Preview">
+    <!-- Top Control Bar -->
+    <div class="lightbox-topbar">
+      <div class="lightbox-meta">
+        <span class="lightbox-title-badge">RM Mathew Archive</span>
+        <span class="lightbox-counter" id="lightbox-counter">Image 01 of 40</span>
+      </div>
+
+      <div class="lightbox-actions">
+        <button class="lightbox-icon-btn" onclick="toggleLightboxZoom()" id="btn-zoom" aria-label="Toggle zoom view">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            <line x1="11" y1="8" x2="11" y2="14" />
+            <line x1="8" y1="11" x2="14" y2="11" />
+          </svg>
+        </button>
+        <button class="lightbox-close-btn" onclick="closeLightbox()" aria-label="Close image preview">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2">
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Image Display Container -->
+    <div class="lightbox-body" onclick="handleLightboxBackdropClick(event)">
+      <button class="lightbox-nav-btn lightbox-prev-btn" onclick="navigateLightbox(-1)"
+        aria-label="Previous photograph">
+        <svg viewBox="0 0 24 24">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+
+      <div class="lightbox-img-container" id="lightbox-img-container">
+        <img src="" alt="Enlarged gallery photograph" id="lightbox-img" class="lightbox-img">
+      </div>
+
+      <button class="lightbox-nav-btn lightbox-next-btn" onclick="navigateLightbox(1)" aria-label="Next photograph">
+        <svg viewBox="0 0 24 24">
+          <polyline points="9 18 15 12 9 6" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Bottom Thumbnail Navigation Strip -->
+    <div class="lightbox-thumbnails-wrap">
+      <div class="lightbox-thumbnails" id="lightbox-thumbnails">
+        <!-- Generated dynamically via script.js for all 40 images -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER SECTION (Dark Forest Green)
+       ========================================================================== -->
+  <footer class="footer-section" id="footer">
+    <div class="container">
+
+      <div class="footer-brand">
+        <h2>RM Mathew</h2>
+        <p>Managing Director, Impress Decors and Rental Pvt Ltd.</p>
+      </div>
+
+      <div class="footer-nav">
+        <a href="index.html#hero">Home</a>
+        <a href="index.html#story">The Journey</a>
+        <a href="index.html#impact">Social Impact</a>
+        <a href="index.html#highlights">Signature Projects</a>
+        <a href="gallery.html" class="active">Photo Gallery</a>
+      </div>
+
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/impressmathew/" class="social-icon-btn" aria-label="LinkedIn"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.7a1.5 1.5 0 1 0 1.5 1.5 1.5 1.5 0 0 0-1.5-1.5z" />
+          </svg>
+        </a>
+        <a href="https://www.instagram.com/mathew_impress" class="social-icon-btn" aria-label="Instagram"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+          </svg>
+        </a>
+        <a href="https://www.facebook.com/share/1DE6VcZMtw/" class="social-icon-btn" aria-label="Facebook"
+          target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+          </svg>
+        </a>
+      </div>
+
+      <div class="footer-copyright">
+        <p>© 2026 All rights reserved. Developed by <a href="https://www.jodbs.com/" class="JOD-link" target="_blank"
+            rel="noopener noreferrer">JOD Business Services</a>.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
